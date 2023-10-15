@@ -48,10 +48,31 @@ esta utilizando -->
 
     </header>
     
+    <br>
+
+    <button id="show">Ver más información</button>
+
+    <dialog id="modal">
+        <h1>¿Sabías que puedes abrir un modal con HTML?</h1>
+        <p>¡Es nativo!</p>
+        <button id="closeModal">Cerrar Modal</button>
+    </dialog>
     <!-- <button role="button">
         Haz click aqui
     </button> -->
 
+    <script>
+
+        window.show.addEventListener("click", () => {
+            window.modal.showModal()
+        })
+
+        window.closeModal.addEventListener("click", () => {
+            window.modal.close()
+        })
+
+    </script>
+    
     <main>
 
         <p>
@@ -152,7 +173,15 @@ esta utilizando -->
 
         <hr>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/G2gjh3qbN3o?si=YRhxM5wt5REV8YzA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/G2gjh3qbN3o?si=YRhxM5wt5REV8YzA" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen
+        ></iframe>
 
         <hr>
         
