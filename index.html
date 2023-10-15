@@ -47,6 +47,10 @@ esta utilizando -->
         </nav>
 
     </header>
+    
+    <!-- <button role="button">
+        Haz click aqui
+    </button> -->
 
     <main>
 
@@ -62,18 +66,29 @@ esta utilizando -->
             <li>Hiplot - 2021 , 2022 </li>
         </ul>
 
-        <img title="Esta es una foto" alt="Foto de perfil" src="foto.jpg" height="400" width="400" id="avatar" />
+        <!-- el atributo download solo funciona con 
+        recursos que esten en el propio dominio, no 
+        recursos externos. -->
+        <a download href="foto.jpg">
+            <img 
+                title="Esta es una foto" 
+                alt="Foto de perfil"
+                src="foto.jpg" 
+                height="400" 
+                width="400" 
+                id="avatar" 
+            />
+        </a>
 
         <h2>Proyectos realizados</h2>
 
         <aside>
-
             <head>
                 <h3>Tecnologias Favoritas</h3>
             </head>
-            <ol>
+            <ol type="A" start="2" reversed>
                 <li>HTML</li>
-                <li>CSS</li>
+                <li value="2">CSS</li>
                 <li>JavaScript</li>
             </ol>
         </aside>
@@ -96,10 +111,115 @@ esta utilizando -->
                 </fieldset>
             </article>
         </section>
-    </main>
 
+        <section>
+            
+            <h2>Preguntas frecuentes</h2>
+
+            <details open>
+                <summary>
+                    ¿Qué estudios tienes?
+                </summary>
+                <p>
+                    Estudie en la universidad Politecnica
+                    de Quintana Roo.
+                </p>
+            </details>
+            
+            <details>
+                <summary>
+                    ¿Cuáles son tus hobbies?
+                </summary>
+                <p>
+                    Me gusta mucho salir a correr, saltar 
+                    a la cuerda y el MMA.
+                </p>
+            </details>
+
+        </section>
+
+        <section>
+            
+            <h2>Formulario de contacto</h2>
+
+            <form action="/" method="post">
+                <fieldset>
+                    
+                    <legend>Información personal</legend>
+                    
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                    
+                        <input 
+                            type="text"
+                            name="nombre"
+                            id="nombre"
+                            placeholder="Sapopeta"
+                            required
+                        />
+                    </div>
+
+                    <!-- otra forma de relacionar el label -->
+
+                    <br>
+
+                    <div>
+                        <label>
+                            Apellidos:
+                            <input 
+                                type="text"
+                                name="apellidos"
+                                id="apellidos"
+                                required
+                                placeholder="Sapopeta"
+                            />
+                        </label>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="email">Email:</label>
+                    
+                        <input 
+                            type="email"
+                            name="email"
+                            id="email"
+                            required="off"
+                            placeholder="prueba@gmail.com"
+                        />
+                    </div>
+
+                    <br>
+                    
+                    <div>
+                        <datalist id="languages">
+                            <option value="Python">Python</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="React">React</option>
+                        </datalist>
+                        <label for="">
+                            ¿Con qué lenguaje te acomodas mejor?
+                            <input list="languages" name="languages">
+                        </label>
+                    </div>
+
+                    <br>
+
+                    <button>
+                        Enviar
+                    </button>
+
+                </fieldset>
+            </form>
+
+        </section>
+
+    </main>
+    <br>
     <footer>
         Copyright &copy; 2023
+        <a href="mailto:soyronyvargas@gmail.com">Enviame un correo</a>
     </footer>
 </body>
 
