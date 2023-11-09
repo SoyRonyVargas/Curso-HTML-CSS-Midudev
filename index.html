@@ -41,7 +41,51 @@ esta utilizando -->
         h1
         {
             /* ultimos dos digitos para transparencia */
-            color: #00000055;
+            /* color: #00000055; */
+
+            /* obsoleto - legacy */
+            /* color: rgba( 0 , 0 , 0 , 0.5 ); */
+
+            /* Forma moderna */
+            
+            /* color: rgb( 0 0 0 / 50% ); */
+            
+            /* color: rgb( 0 0 0 / 100% ); */
+
+            /* shortut */
+            /* color: #09f; 0099ff */
+            color: #000;
+
+            /* color: hsl( 60, 100%, 50% );  */
+            /* color: oklch( 70% 0.1 19 ); */
+            /* color: transparent; */
+
+            /* bordes */
+            border-style: solid;
+            border-width: 3px;
+            /* color actual del texto de ese elemento */
+            border-color: currentColor;
+
+
+            padding: 5px 10px;
+
+        }
+
+        .link
+        {
+            color: red;
+        }
+
+        #show
+        {
+            background-color: #08f;
+            letter-spacing: 0.4px;
+            border-radius: 6px;
+            padding: 10px 15px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #FFF;
+            border: none;
         }
 
         body
@@ -60,9 +104,9 @@ esta utilizando -->
         <h1>Portafolio de @soyronyvargas 😀</h1>
 
         <nav>
-            <a href="#experiencia">Experiencia</a>
-            <a href="#proyectos">Proyectos</a>
-            <a 
+            <a  class="link"  href="#experiencia">Experiencia</a>
+            <a  class="link" href="#proyectos">Proyectos</a>
+            <a  class="link" 
                 target="_blank" 
                 href="https://instagram.com/avispaculonai"
                 rel="noreferrer"
