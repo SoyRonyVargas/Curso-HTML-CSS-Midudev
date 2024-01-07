@@ -148,6 +148,48 @@ esta utilizando -->
             color: yellow;
         }
 
+        /* operador hermano siguiente */
+        /* no importa si hay una etiqueta entre el h1 y la p */
+        h1 ~ p
+        {
+            background-color: #08f;
+            display: inline-block;
+            padding: 10px;
+        }
+
+        /* operador hermano estrictamente siguiente */
+        /* si importa si hay una etiqueta entre el h1 y la p */
+        h1 + p
+        {
+            background-color: red;
+            display: inline-block;
+            padding: 10px;
+        }
+
+        /* fallback */
+        /* si el navegador no soporta oklch
+        tomara el de arriba */
+        h2  
+        {
+            color: #08f;
+            color: oklch(50% 0.148 238.24);
+        }
+
+        h2  
+        {
+            color: #08f;
+            color: oklch(50% 0.148 238.24);
+        }
+
+        /* unidades relativas y absolutas */
+
+        .container
+        {
+            background-color: #08f;
+            height: 50vh;
+            width: 250px;
+        }
+
     </style>
 
 </head>
@@ -157,6 +199,10 @@ esta utilizando -->
     <header>
         
         <h1>Portafolio de @soyronyvargas 😀</h1>
+        
+        <span> </span>
+
+        <p>¡Este es un operador hermano siguiente </p>
 
         <nav>
             <a  class="link"  href="#experiencia">Experiencia</a>
@@ -169,6 +215,12 @@ esta utilizando -->
         </nav>
 
     </header>
+    
+    <br>
+    
+    <div class="container">
+
+    </div>
     
     <br>
 

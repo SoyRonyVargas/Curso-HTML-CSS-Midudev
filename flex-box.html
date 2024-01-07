@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="demo">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <br>
+    <section id="box">
+        <section id="container2">
+        </section>
+    </section>
+    <section id="box">
+        <section id="container2">
+        </section>
+    </section>
+    <section id="box">
+        <section id="container2">
+        </section>
+    </section>
+    <style>
+        .demo>* {
+            width: 250px;
+            height: 200px;
+        }
+
+        .demo>*+* {
+            margin-top: -150px;
+            opacity: 0.8;
+            box-shadow: 0 -1px 10px rgba(0 0 0 / 60%);
+        }
+
+        .demo> :first-child {
+            background: aliceblue;
+            border: 2px solid lightblue;
+        }
+
+        .demo> :nth-child(2) {
+            background: pink;
+            border: 2px solid hotpink;
+        }
+
+        .demo> :last-child {
+            background: wheat;
+            border: 2px solid gold;
+        }
+
+        #container {
+            width: 150px;
+            height: 150px;
+            background: white;
+            padding: 10px;
+            box-sizing: content-box;
+            font-size: 48px;
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+            overflow: hidden;
+
+            /* pone al texto tres puntitos ... */
+            /* text-overflow: ellipsis; */
+            /* corta el texto */
+            text-overflow: clip;
+        }
+
+        #box {
+            border: 5px solid #000;
+            height: 400px;
+            width: 400px;
+            position: relative;
+        }
+
+        #container2 {
+            height: 100px;
+            width: 100px;
+            background-color: #09f;
+
+            /* coordenadas fijas a la pantalla o viewport */
+            /* position: fixed; */
+
+            /* es como el fixed pero relativo al padre */
+            /* position: sticky; */
+
+            /* position: absolute; */
+            border-radius: 100%;
+
+            /* sirve para centrar con posicion absoluta pero hay otra forma*/
+            /* top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto; */
+
+            /* centrar de manera resumida para posicion absolute */
+            inset: 0;
+            margin: auto;
+            /* right: 0;
+            top: 0; */
+
+        }
+
+        /* body
+        {
+            background-color: #09f;
+            margin: 0; 
+        } */
+    </style>
+</body>
+
+</html>
